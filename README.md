@@ -120,15 +120,13 @@ int n = 4;        // Thread count for Pthreads/OpenMP
 
 ---
 
- 📄 License
 
-MIT License
-
----
  👥 Authors
 
 * **Bilal Shafiq** (21K-3222)
 * **Muhammad Haris** (21K-3415)
 * **Ghufran Ghous** (21I-2991)
+
+  
 
 
