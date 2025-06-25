@@ -53,3 +53,79 @@ gcc -o heap Heap.c -lpthread -fopenmp
 # Radix Sort
 gcc -o radix Radix.c -lpthread -fopenmp
 ./radix
+📊 Results Snapshot
+Algorithm	Serial	Pthreads	OpenMP
+Count Sort	0.002 s	0.003 s	0.003 s
+Heap Sort	0.002 s	0.008 s	0.006 s
+Radix Sort	0.002 s	0.001 s	0.004 s
+
+🔍 Observations
+Count Sort: Best performance in serial due to low complexity.
+
+Heap Sort: OpenMP outperforms Pthreads, likely due to better load balancing.
+
+Radix Sort: Pthreads offer best performance with fine-grained control.
+
+📁 Project Structure
+bash
+Copy
+Edit
+parallel-sorting-algorithms/
+├── Count.c           # Count Sort (Serial, Pthreads, OpenMP)
+├── Heap.c            # Heap Sort (Serial, Pthreads, OpenMP)
+├── Radix.c           # Radix Sort (Serial, Pthreads, OpenMP)
+├── CountTime.txt     # Count Sort timing results
+├── HeapTime.txt      # Heap Sort timing results
+├── RadixTime.txt     # Radix Sort timing results
+├── OS Project Report.pdf
+└── README.md
+⚙️ Configuration
+Inside the code:
+
+
+int size = 100;   // Modify for array size
+int n = 4;        // Thread count for Pthreads/OpenMP
+📈 Performance Analysis Highlights
+✅ When Parallel Wins
+Large datasets
+
+Independent operations (e.g., Radix digit processing)
+
+🚫 When Serial Wins
+Small datasets (threading overhead > speedup)
+
+Memory-bound operations
+
+🤝 Contributing
+How to Contribute
+Fork the repo
+
+Create a branch:
+git checkout -b feature/improve-performance
+
+Commit changes:
+git commit -m "Improve performance of Heap Sort"
+
+Push:
+git push origin feature/improve-performance
+
+Open a Pull Request 🎉
+
+Ideas for Enhancement
+Add Quick Sort or Merge Sort
+
+Implement CUDA for GPU-based sorting
+
+Add benchmarking automation
+
+Analyze memory usage and thread scaling
+
+
+👥 Authors
+Bilal Shafiq (21K-3222)
+
+Muhammad Haris (21K-3415)
+
+Ghufran Ghous (21I-2991)
+
+National University of Computer and Emerging Sciences – FAST, Karachi Campus
